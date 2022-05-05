@@ -12,7 +12,7 @@
     <title>DoctorCare</title>
   </head>
 
-  <body onscroll="onScroll()">
+  <body>
     <nav id="navigation">
       <div class="wrapper">
         <a class="logo" href="#home">
@@ -72,7 +72,9 @@
             <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
             <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
           </ul>
-          <a class="button" href="#">Agende sua consuta</a>
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Agende sua consuta</a
+          >
 
           <ul class="social-links">
             <li>
@@ -228,7 +230,7 @@
             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
             raiz de sua doença e proporcionar uma cura a longo prazo.
           </p>
-          <button>
+          <a href="#contact" class="button">
             <svg
               width="20"
               height="20"
@@ -242,7 +244,7 @@
               />
             </svg>
             Agende sua consulta
-          </button>
+          </a>
           <img
             src="./assets/img/Mulher-negra-vestindo-moleton-verde-sorrindo.png"
             alt="Mulher negra vestindo moleton verde sorrindo"
@@ -441,7 +443,7 @@
             ullamco est sit aliqua dolor do amet sint.
           </p>
           <img
-            src="./assets/img/Doutor-segurando-prancheta-com-pacientes-4x.png"
+            src="./assets/img/Doutor-segurando-prancheta-com-pacientes.png"
             alt="Doutor feliz segurando prancheta com pacientes"
           />
         </div>
@@ -506,7 +508,7 @@
               <p>contato@beautysalon.com</p>
             </div>
           </div>
-          <button>
+          <a href="https://wa.me/5531987654321" target="_blank" class="button">
             <svg
               width="20"
               height="20"
@@ -520,7 +522,7 @@
               />
             </svg>
             Agende sua consulta
-          </button>
+          </a>
           <img
             src="./assets/img/homem-usando-smartphone-no-sofa-em-casa.png"
             alt="homem usando smartphone no sofa em casa"
@@ -579,10 +581,10 @@
             fill="white"
           />
         </svg>
-        <div class="copyright">
-          <p>©2021 Beautysalon.</p>
-          <p>Todos os direitos reservados.</p>
-        </div>
+        <p>
+          ©2021 Beautysalon. <br />
+          Todos os direitos reservados.
+        </p>
         <ul class="social-links">
           <li>
             <a href="https://instagram.com" target="_blank">
@@ -665,6 +667,33 @@
         </ul>
       </div>
     </footer>
+
+    <a id="homeButton" href="#home"
+      ><svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
     <!--ScrollReaveal Lib-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>

@@ -1,8 +1,25 @@
+window.addEventListener('scroll', onScroll)
+
+onScroll()
+
 function onScroll() {
+  changeNavOnScroll()
+  showHomeButtonOnScroll()
+}
+
+function changeNavOnScroll() {
   if (scrollY > 30) {
     navigation.classList.add('scroll')
   } else {
     navigation.classList.remove('scroll')
+  }
+}
+
+function showHomeButtonOnScroll() {
+  if (scrollY > 820) {
+    homeButton.classList.add('show')
+  } else {
+    homeButton.classList.remove('show')
   }
 }
 
@@ -27,5 +44,8 @@ ScrollReveal({
 #services .card,
 #about,
 #about header,
-#about .content
+#about .content,
+#contact header,
+#contact .content,
+footer
   `)
