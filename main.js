@@ -5,6 +5,26 @@ onScroll()
 function onScroll() {
   changeNavOnScroll()
   showHomeButtonOnScroll()
+
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
+}
+
+function activateMenuAtCurrentSection(section) {
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+  const targetLine = scrollY + innerHeight / 2
+
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  const sectioEndsAt = sectionTop + sectionHeight
+
+  const sectionTopReachOrPassedTargtLine =
+    targetLine > sectionTop && targetLine <= sectioEndsAt
+      ? menuElement.classList.add('active')
+      : menuElement.classList.remove('active')
 }
 
 function changeNavOnScroll() {
@@ -16,7 +36,7 @@ function changeNavOnScroll() {
 }
 
 function showHomeButtonOnScroll() {
-  if (scrollY > 820) {
+  if (scrollY > 478) {
     homeButton.classList.add('show')
   } else {
     homeButton.classList.remove('show')
